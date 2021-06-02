@@ -1,0 +1,5 @@
+192.168.1.1,cisco_asa,CiscoASA5525-FW,NO
+192.168.1.2,cisco_ios,CiscoIOS7600-Router,YES
+192.168.1.3,huawei,HuaweiNE40X3-Router,YES
+192.168.1.4,cisco_nxos,CiscoNEXUS7k-Switch,NO
+192.168.1.5,alcatel_sros,AlcatelSR7750-Router,NO
