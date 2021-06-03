@@ -1,0 +1,5 @@
+show running-configuration,cisco_ios
+show running-configuration,cisco_nxos
+show running-configuration,cisco_asa
+show run-config commands,cisco_wlc
+display current-configuration,huawei
