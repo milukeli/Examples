@@ -185,7 +185,8 @@ threads.close()                                     #close current thread if it'
 threads.join()                                      #join new thread to the thread pool
 #========================================================================================================================
 
-log_file.close()                                    #close the logging file
 write_log('\nSCRIPT COMPLETED! Done in: ', datetime.now()-starting_time)  #FINISHED
+log_file.close()                                    #close the logging file
+
 
 #========================================================================================================================
