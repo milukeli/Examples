@@ -162,7 +162,7 @@ def write_log(*args):
 #========================================================================================================================
 
 
-devices_dict_list = read_devices('DevicesList')   #Reading file "FinalTestList" using read_devices() function
+devices_dict_list = read_devices('DevicesList')   #Reading file "DevicesList" using read_devices() function
 credentials   = read_device_creds()                 #Getting credentials using read_device_creds() function
 
 num_threads_str = input('\nNumber of threads (default is 7): ') or '7'  #Number of threads to use
