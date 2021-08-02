@@ -47,11 +47,11 @@ def read_device_creds():
     password = getpass()
     secret = password
 
-    mplsuser = input("Enter local user name: ")
-    mplspass = getpass()
-    mplssecret = mplspass
+    localuser = input("Enter local user name: ")
+    localpass = getpass()
+    localsecret = localpass
 
-    return username, password, secret, mplsuser, mplspass, mplssecret
+    return username, password, secret, localuser, localpass, localsecret
 #=======================================================================================================================
 
 #Function to connect to devices and send commands=======================================================================
@@ -65,12 +65,12 @@ def config_worker(device_and_creds):
     device_ip = device['ipaddr']            #Device IP address
     device_os = device['type']              #Device OS type
     device_name = device['name']            #Device name(hostname)
-    mplsaccess = device['access_type']      #Device access type (MPLS YES/NO or local)
-    if mplsaccess == "NO":
+    localaccess = device['access_type']      #Device access type (local: YES/NO or something different)
+    if localccess == "NO":
         user = creds[0]
         passw = creds[1]
         secret = creds[2]
-    elif mplsaccess == "YES":
+    elif localaccess == "YES":
         user = creds[3]
         passw = creds[4]
         secret = creds[5]
@@ -160,7 +160,6 @@ def write_log(*args):
     log_file.write(line+'\n')
     print(line)
 #========================================================================================================================
-
 
 devices_dict_list = read_devices('DevicesList')   #Reading file "DevicesList" using read_devices() function
 credentials   = read_device_creds()                 #Getting credentials using read_device_creds() function
