@@ -66,7 +66,7 @@ def config_worker(device_and_creds):
     device_os = device['type']              #Device OS type
     device_name = device['name']            #Device name(hostname)
     localaccess = device['access_type']      #Device access type (local: YES/NO or something different)
-    if localccess == "NO":
+    if localaccess == "NO":
         user = creds[0]
         passw = creds[1]
         secret = creds[2]
