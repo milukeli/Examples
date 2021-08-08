@@ -117,7 +117,7 @@ def config_worker(device_and_creds):
                 print('Getting configuration from device ' + device_name)
                 config_data = session.send_command(command)
                 #Write out configuration information to file  - filename: device_name#device_ip-date
-                config_filename = device_name + '#' + device_ip + '-' + today  # Important - create unique file name
+                config_filename = device_name + '#' + device_ip + '-' + today + '.txt' # Important - create unique file name
                 write_log('Saving configuration for: ' + config_filename)
                 with open(config_filename, 'w') as config_out:
                     config_out.write(config_data)
@@ -132,7 +132,7 @@ def config_worker(device_and_creds):
         config_data = session.send_command(command)
 
         #Write out configuration information to file with following filename format: device_name#device_ip-date
-        config_filename = device_name + '#' + device_ip + '-' + today   # Important - create unique file name
+        config_filename = device_name + '#' + device_ip + '-' + today + '.txt'  # Important - create unique file name
 
         write_log('Saving configuration for: ' + config_filename)
         with open(config_filename, 'w') as config_out:
